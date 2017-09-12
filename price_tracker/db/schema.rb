@@ -15,6 +15,9 @@ ActiveRecord::Schema.define(version: 20170912151358) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "lists", force: :cascade do |t|
+  end
+
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.boolean "available_online"
@@ -24,9 +27,7 @@ ActiveRecord::Schema.define(version: 20170912151358) do
     t.string "stock"
     t.string "add_to_cart"
     t.integer "item_id"
-  end
-
-  create_table "users", force: :cascade do |t|
+    t.integer "list_id"
   end
 
 end

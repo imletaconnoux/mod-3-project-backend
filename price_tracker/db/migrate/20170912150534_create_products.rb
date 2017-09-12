@@ -9,6 +9,7 @@ class CreateProducts < ActiveRecord::Migration[5.1]
       t.string :stock
       t.string :add_to_cart
       t.integer :item_id
+      t.integer :list_id, :default => nil
     end
   end
 end
