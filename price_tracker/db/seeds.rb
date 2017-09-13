@@ -4,7 +4,7 @@ require_all "lib"
 product_adapter = WalmartApi.new
 product_adapter.get_products_from_api
 
-list = List.create()
+list = List.create(name: "list")
 # list = List.create()
 # list.products << {
 #   id: 1,

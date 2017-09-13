@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20170912151358) do
   enable_extension "plpgsql"
 
   create_table "lists", force: :cascade do |t|
+    t.string "name"
   end
 
   create_table "products", force: :cascade do |t|
