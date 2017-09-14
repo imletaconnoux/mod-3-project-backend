@@ -1,5 +1,7 @@
 class Api::V1::ProductsController < ApplicationController
   def index
+    product_adapter = WalmartApi.new
+    product_adapter.get_products_from_api
     @products = Product.all
     render json: @products, status: 200
   end
